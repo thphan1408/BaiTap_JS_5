@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <section id="admissionsManager">
+      <div class="mt-3">
+        <div class="border border-primary">
+          <div class="title text-center mt-3">
+            <h2 class="bg-primary text-white d-inline-block p-3">
+              Quản lý tuyển sinh
+            </h2>
+          </div>
+
+          <form action="" class="m-3">
+            <div class="form-group d-flex mx-sm-3">
+              <div class="mr-3">
+                <label for="inputBenchmark" class="mr-3">Nhập vào điểm chuẩn</label>
+                <input type="number" class="form-control" id="inputBenchmark" placeholder="Nhập vào điểm chuẩn" />
+              </div>
+
+              <div class="mr-3">
+                <label for="inputMonth" class="mr-3">Chọn khu vực</label>
+                <select class="custom-select" id="inputArea">
+                  <option selected>Chọn khu vực.</option>
+                  <option value="2">A</option>
+                  <option value="1">B</option>
+                  <option value="0.5">C</option>
+                </select>
+              </div>
+
+              <div class="mr-3">
+                <label for="inputMonth" class="mr-3">Chọn đối tượng</label>
+                <select class="custom-select" id="inputObject">
+                  <option selected>Chọn đối tượng.</option>
+                  <option value="2.5">1</option>
+                  <option value="1.5">2</option>
+                  <option value="1">3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+              <div class="mb-3">
+                <label for="inputScore1" class="mr-3">Nhập vào điểm môn thứ 1</label>
+                <input type="number" class="form-control" id="inputScore1" placeholder="Nhập vào điểm môn thứ 1" />
+              </div>
+
+              <div class="mb-3">
+                <label for="inputScore2" class="mr-3">Nhập vào điểm môn thứ 2</label>
+                <input type="number" class="form-control" id="inputScore2" placeholder="Nhập vào điểm môn thứ 2" />
+              </div>
+
+              <div class="mb-3">
+                <label for="inputScore3" class="mr-3">Nhập vào điểm môn thứ 3</label>
+                <input type="number" class="form-control" id="inputScore3" placeholder="Nhập vào điểm môn thứ 3" />
+              </div>
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center m-3">
+            <button class="btn btn-primary mr-3" onclick="calcScore()">
+              Kết quả
+            </button>
+            <div class="result__Score ml-5 text-danger text-uppercase font-weight-bold"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Electric">
+      <div class="mt-3">
+        <div class="border border-primary">
+          <div class="title text-center mt-3">
+            <h2 class="bg-primary text-white d-inline-block p-3">
+              Tính tiền điện
+          </div>
+
+          <form action="" class="form-inline m-3">
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputName" class="mr-3">Nhập tên:</label>
+              <input type="text" class="form-control" id="inputName" placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputKwDien" class="mr-3">Nhập số kw điện:</label>
+              <input type="number" class="form-control" id="inputKwDien" placeholder="">
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center m-3">
+            <button class="btn btn-primary mr-3" onclick="calcElectric()">
+              Kết quả
+            </button>
+            <div class="result__Electric ml-5 text-danger text-uppercase font-weight-bold"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="SalaryUser">
+      <div class="mt-3">
+        <div class="border border-primary">
+          <div class="title text-center mt-3">
+            <h2 class="bg-primary text-white d-inline-block p-3">
+              Tính thuế thu nhập cá nhân
+          </div>
+
+          <form action="" class="form-inline m-3">
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputName2" class="mr-3">Nhập tên:</label>
+              <input type="text" class="form-control" id="inputName2" placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputUser" class="mr-3">Nhập số người phụ thuộc:</label>
+              <input type="number" class="form-control" id="inputUser" placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputSalaryYear" class="mr-3">Nhập số tổng thu nhập năm:</label>
+              <input type="number" class="form-control" id="inputSalaryYear" placeholder="">
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center m-3">
+            <button class="btn btn-primary mr-3" onclick="calcSalary()">
+              Kết quả
+            </button>
+            <div class="result__Salary ml-5 text-danger text-uppercase font-weight-bold"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="SalaryUser">
+      <div class="mt-3">
+        <div class="border border-primary">
+          <div class="title text-center mt-3">
+            <h2 class="bg-primary text-white d-inline-block p-3">
+              Tính tiền cáp
+          </div>
+
+          <form action="" class="form-inline m-3">
+            <div class="form-group col-md-4">
+              <select id="inputState" class="form-control ml-3" onchange="changeInputHandle()">
+                <option selected>Chọn loại khách hàng</option>
+                <option value="nhaDan">Nhà Dân</option>
+                <option value="doanhNghiep">Doanh nghiệp</option>
+              </select>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputIDUser" class="mr-3">Nhập mã khách hàng:</label>
+              <input type="number" class="form-control" id="inputIDUser" placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputHigher" class="mr-3">Nhập số kênh cao cấp:</label>
+              <input type="number" class="form-control" id="inputHigher" placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="number" class="form-control" id="inputNumberConnect" placeholder="Nhập số kết nối">
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center m-3">
+            <button class="btn btn-primary mr-3" onclick="calcTienCap()">
+              Kết quả
+            </button>
+            <div class="result__TienCap ml-5 text-danger text-uppercase font-weight-bold"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
